@@ -74,16 +74,28 @@ header {
   top: 60px;
   right: 0;
   background-color: var(--dark);
-  width: 50%;
+  /* width: 50%; */
   padding: 1rem;
   display: none; /* Hidden by default */
   transition: max-height 0.3s ease;
 }
 
+.beeg {
+  transition: all 0.1s ease;
+}
+.beeg:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
 .nav-links.active {
   display: flex; /* Show nav links when active */
   flex-direction: column;
-  max-height: 500px; /* Arbitrary value to allow space for links */
+  justify-content: space-between;
+  align-items: center;
+  height: 150px; /* Arbitrary value to allow space for links */
+  width: 80px;
+  margin-top: 0;
 }
 
 .navbar .nav-links a {
@@ -97,7 +109,13 @@ header {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   display: inline-block;
-  width: 100%;
+  width: 85px;
+  transition: all 0.1s ease-in-out;
+  text-align: center;
+}
+
+.navbar .contact-btn:hover {
+  transform: scale(1.2);
 }
 
 .hamburger {
@@ -114,6 +132,14 @@ header {
 }
 
 /* Hero section */
+.logo {
+  transition: all 0.1s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -170,6 +196,11 @@ header {
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
+  transition: all 0.1s ease-in-out;
+}
+
+.hero-buttons .btn:hover {
+  transform: scale(1.1);
 }
 
 .primary-btn {
@@ -245,6 +276,13 @@ section h2 {
   text-decoration: none;
 }
 
+.ig-link:hover {
+  transition: all 0.1s ease;
+}
+.ig-link:hover {
+  transform: scale(1.2);
+}
+
 /* Tablet styles */
 @media (min-width: 768px) {
   .navbar .nav-links {
@@ -267,7 +305,7 @@ section h2 {
     width: 75px;
     height: 25px;
     line-height: 25px;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .hamburger {
@@ -280,6 +318,11 @@ section h2 {
 
   .about-content, .media-content, .merch-content {
     flex-direction: row; /* Row layout for tablet and above */
+    justify-content: space-between;
+  }
+
+  .section-title-content {
+    width: 100%;
   }
 
   .about-content img, .media-content img, .merch-content img {
