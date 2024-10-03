@@ -1,7 +1,319 @@
+:root {
+  --dark: #1B212E; /* var(--dark) */
+  --light: #ffff; /* var(--light) */
+  --primary: #75E4F3; /* Blue var(--primary)*/ 
+  --secondary: #ED8045; /* Orange var(--secondary)*/
+  --accent: #23A863; /* Green var(--accent)*/
+}
+
 body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: var(--light);
+}
+
+
+/* Base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+hr {
+  color: var(--light);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(27, 33, 46, 0.8);
+  z-index: 100;
+}
+
+.logo-svg {
+  width: 100px;
+  height: 100px;
+}
+
+.musical-improv-tag {
+  font-size: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 2rem;
+  border-bottom: 1px solid var(--light);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a, .navbar a:hover, .navbar a:active, .navbar a:focus  {
+  color: var(--light);
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: var(--dark);
+  width: 50%;
+  padding: 1rem;
+  display: none; /* Hidden by default */
+  transition: max-height 0.3s ease;
+}
+
+.nav-links.active {
+  display: flex; /* Show nav links when active */
+  flex-direction: column;
+  max-height: 500px; /* Arbitrary value to allow space for links */
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: var(--light);
+  padding: 0.75rem 0;
+}
+
+.navbar .contact-btn {
+  background-color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  width: 100%;
+}
+
+.hamburger {
+  display: flex; /* Hidden on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--light); /* Change color as needed */
+  margin: 3px 0;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
   text-align: center;
 }
 
-.advert {
-  height: 90vh;
+.hero-title {
+  /* font-size: 48px; */
+  color: var(--light); /* Text color */
+  text-shadow: 
+    -2px -2px 0 var(--dark),  
+     2px -2px 0 var(--dark),
+    -2px  2px 0 var(--dark),
+     2px  2px 0 var(--dark); /* Adjust the color and size of the shadow */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 33, 46, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.primary-btn {
+  background-color: var(--primary);
+  color: var(--dark);
+  width: 20%;
+  font-size: 150%;
+}
+
+.secondary-btn {
+  background-color: var(--secondary);
+  color: var(--light);
+  width: 20%;
+  font-size: 150%;
+}
+
+/* Section styles */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-content, .media-content, .merch-content {
+  display: flex;
+  flex-direction: column; /* Column layout for mobile */
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-content img, .media-content img, .merch-content img {
+  width: 100%; /* Full width for images on mobile */
+  border-radius: 10px;
+  max-width: 600px;
+  border: 3px solid var(--accent)
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; /* Full width on mobile */
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form .btn {
+  cursor: pointer;
+}
+
+.footer-div {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary);
+}
+
+.footer-div a, .footer-div a:hover, .footer-div a:active, .footer-div a:focus  {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .navbar .nav-links {
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+    display: flex; /* Show menu for tablet and above */
+    gap: 1.5rem;
+  }
+
+  .navbar .nav-links a {
+    padding: 0;
+    line-height: 25px;
+  }
+
+  .navbar .contact-btn {
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .about-content, .media-content, .merch-content {
+    flex-direction: row; /* Row layout for tablet and above */
+  }
+
+  .about-content img, .media-content img, .merch-content img {
+    width: 40%;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 1rem 2rem;
+  }
+
+  section {
+    padding: 6rem 4rem;
+  }
+
+  .about-content, .media-content, .merch-content {
+    gap: 4rem;
+  }
+
+  .contact-form {
+    max-width: 600px; /* Restrict max-width on larger screens */
+  }
 }
