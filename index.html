@@ -103,9 +103,9 @@
         <span></span>
       </div>
       <ul class="nav-links" id="nav-links">
-        <li class="beeg"><a href="#about">about</a></li>
-        <li class="beeg"><a href="#media">media</a></li>
-        <li class="beeg"><a href="#merch">merch</a></li>
+        <li class="nav-grow"><a href="#about">about</a></li>
+        <li class="nav-grow"><a href="#media">media</a></li>
+        <li class="nav-grow"><a href="#merch">merch</a></li>
         <li><a href="#contact" class="contact-btn">contact</a></li>
       </ul>
     </nav>
@@ -121,8 +121,8 @@
     <div class="hero-content">
       <h1 class="hero-title">Musical Comedy with Heart</h1>
       <div class="hero-buttons">
-        <a href="#media" class="btn primary-btn">Clips</a>
-        <a href="https://www.jackalopetheater.com/shows" target="_blank" class="btn secondary-btn">Tickets</a>
+        <a href="#media" class="btn primary-btn" aria-label="view clips">Clips</a>
+        <a href="https://www.jackalopetheater.com/shows" target="_blank" class="btn secondary-btn" aria-label="purchase tickets">Tickets</a>
       </div>
     </div>
   </section>
@@ -174,7 +174,14 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Contact section under construction! Find us on instagram at @offbeatmusicalimprov or email at offbeatmusicalimprov@gmail.com!</p>
+    <p>Find us on instagram at</p>
+    <div class="beeg">
+      <a href="https://www.instagram.com/offbeatmusicalimprov">@offbeatmusicalimprov</a>
+    </div>
+    <p>or email at</p>
+    <div class="beeg">
+      <a href="mailto:offbeatmusicalimprov@gmail.com">offbeatmusicalimprov@gmail.com!</a>
+    </div>
     <!-- <form class="contact-form">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
@@ -195,15 +202,15 @@
   <footer>
     <div class="footer-div">
       <div>
-        <p>&copy; 2024 Offbeat Musical Improv. All rights reserved.</p>
+        <p>&copy; 2024 Offbeat Musical Improv</p>
       </div>
       <div class="ig-link">
         <a href="https://www.instagram.com/offbeatmusicalimprov" aria-label="Instagram link">
           @offbeatmusicalimprov
         </a>
-        <span style="margin-right: 10px;"></span>
+        <span class="ig-span"></span>
         <a href="https://www.instagram.com/offbeatmusicalimprov" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="fa fa-instagram" style="font-size:36px;color:#ED8045"></i>
+          <i class="fa fa-instagram" style="font-size: 36px"></i>
         </a>      
       </div>
     </div>
