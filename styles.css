@@ -242,12 +242,19 @@ section h2 {
   border: 3px solid var(--secondary)
 }
 
+.ig-grow {
+  transition: all 0.1s ease;
+}
+.ig-grow:hover {
+  transform: scale(1.2);
+}
+
 .contact a, .contact a:hover, .contact a:visited, .contact a:active, .contact a:focus {
   text-decoration: none;
   color: var(--light);
 }
 
-.beeg {
+.contact-link {
   border-radius: 5px;
   text-align: center;
   margin: auto;
@@ -258,7 +265,7 @@ section h2 {
   transition: all 0.1s ease;
 }
 
-.beeg:hover {
+.contact-link:hover {
   /* display: inline-block; */
   transform: scale(1.2);
 }
