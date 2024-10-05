@@ -242,6 +242,25 @@ section h2 {
   border: 3px solid var(--secondary)
 }
 
+.merch-btn {
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  background: var(--secondary);
+  width: 300px;
+  line-height: 50px;
+  transition: all 0.1s ease;
+}
+
+.merch-btn:hover {
+  transform: scale(1.2);
+}
+
+.merch-btn a, .merch-btn a:hover, .merch-btn a:visited, .merch-btn a:active, .merch-btn a:focus {
+  text-decoration: none;
+  color: var(--light);
+}
+
 .ig-grow {
   transition: all 0.1s ease;
 }
