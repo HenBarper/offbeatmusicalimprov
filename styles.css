@@ -316,17 +316,21 @@ section h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: var(--accent);
+  color: var(--light);
   padding-bottom: 20px;
 }
 
 .footer-div a, .footer-div a:hover, .footer-div a:active, .footer-div a:focus  {
-  color: var(--accent);
+  color: var(--light);
   text-decoration: none;
 }
 
+.at_offbeat {
+  margin-bottom: 10px;
+}
+
 .ig-link {
-  color: var(--secondary);
+  color: var(--light);
   transition: all 0.1s ease;
 }
 .ig-link:hover {
