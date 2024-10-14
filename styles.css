@@ -529,3 +529,7 @@ section h2 {
     width: 50%;
   }
 }
+
+.mailchimp {
+  color: var(--dark);
+}
