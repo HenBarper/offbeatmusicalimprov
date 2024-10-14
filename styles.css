@@ -72,6 +72,7 @@ header {
   flex-direction: column;
   position: absolute;
   top: 60px;
+  height: 25px;
   right: 0;
   background-color: var(--dark);
   /* width: 50%; */
@@ -92,7 +93,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 150px; /* Arbitrary value to allow space for links */
+  height: 200px; /* Arbitrary value to allow space for links */
   width: 80px;
   margin-top: 0;
 }
@@ -242,17 +243,46 @@ section h2 {
   border: 3px solid var(--secondary)
 }
 
-.merch-btn {
+/* .merch-btn {
   border-radius: 5px;
   text-align: center;
   margin: auto;
   background: var(--secondary);
   width: 300px;
+  width: 20%;
   line-height: 50px;
+  transition: all 0.1s ease;
+} */
+
+.std-btn {
+  display: block;
+  text-decoration: none;
+  margin: auto;
+  background-color: var(--secondary);
+  color: var(--light);
+  width: 65%;
+  line-height: 65px;
+  border-radius: 5px;
   transition: all 0.1s ease;
 }
 
-.merch-btn:hover {
+.std-btn:hover {
+  transform: scale(1.2);
+}
+
+.half-std-btn {
+  display: block;
+  text-decoration: none;
+  margin: auto;
+  background-color: var(--secondary);
+  color: var(--light);
+  width: 65%;
+  line-height: 65px;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+.half-std-btn:hover {
   transform: scale(1.2);
 }
 
@@ -341,6 +371,57 @@ section h2 {
   margin-right: 0;
 }
 
+.donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.donate h2 {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.donate h3 {
+  color: var(--accent);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 80%;
+}
+
+/* .donation-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  color: var(--dark);
+  width: 75px;
+  height: 25px;
+  font-size: 90%;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+} */
+
+/* .donation-div:hover {
+  transform: scale(1.2);
+} */
+
+/* .donation-div a, .donation-div a:hover, .donation-div a:active, .donation-div a:focus  {
+  color: var(--light);
+  text-decoration: none;
+} */
+
+.donate-btn{
+  font-size: 1.5rem;
+}
+
 /* Tablet styles */
 @media (min-width: 768px) {
   .navbar .nav-links {
@@ -398,6 +479,13 @@ section h2 {
   .ig-span {
     margin-right: 5px;
   }
+
+  .std-btn {
+    width: 40%;
+  }
+  .half-std-btn {
+    width: 65%;
+  }
 }
 
 /* Desktop styles */
@@ -432,5 +520,12 @@ section h2 {
 
   .contact-form {
     max-width: 600px; /* Restrict max-width on larger screens */
+  }
+
+  .std-btn {
+    width: 32%;
+  }
+  .half-std-btn {
+    width: 50%;
   }
 }
