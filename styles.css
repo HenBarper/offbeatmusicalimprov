@@ -4,6 +4,7 @@
   --primary: #75E4F3; /* Blue var(--primary)*/
   --secondary: #23A863; /* Orange var(--secondary)*/
   --accent: #ED8045; /* Green var(--accent)*/
+  --accent-light: #ff9258;
 }
 
 body {
@@ -390,7 +391,7 @@ section h2 {
   margin-bottom: 2rem;
 }
 .donate h3 {
-  color: var(--accent);
+  color: var(--accent-light);
   font-size: 1.25rem;
   margin-bottom: 2rem;
   opacity: 80%;
